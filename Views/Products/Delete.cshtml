@@ -1,0 +1,47 @@
+﻿@model WebsiteBanRuouVang.Models.Products
+@{
+    ViewBag.Title = "Xoá sản phẩm";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    var cookie = Context.Request.Cookies["auth"];
+    ViewBag.Username = cookie.Value;
+}
+
+<div class="manage-product">
+    <div class="manage-product-header">
+        <h2 class="manage-product-header-h">@ViewBag.Title</h2>
+    </div>
+
+    @using (Html.BeginForm("Delete", "Products", FormMethod.Post, new { id = "myForm", @class = "manage-product-content" }))
+    {
+        <table class="table table-Primary table-striped manage-product-content-table delete-product-content-table">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Hình ảnh</th>
+                    <th>Tên</th>
+                    <th>Giá</th>
+                    <th>Mô tả</th>
+                    <th>Danh mục</th>
+                    <th>Thương hiệu</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.Id</td>
+                    <td><img src="~/image/@Model.Image" /></td>
+                    <td>@Html.DisplayFor(row => Model.Name)</td>
+                    <td>@Html.DisplayFor(row => Model.Price)</td>
+                    @*<td>@Model.Price.ToString("N0") VNĐ</td>*@
+                    <td>@Html.DisplayFor(row => Model.Detail)</td>
+                    <td>@Html.DisplayFor(row => Model.Departments.Name)</td>
+                    <td>@Html.DisplayFor(row => Model.Brands.Name)</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="create-product-content-bottom edit-product-content-bottom">
+            <button type="submit" class="btn btn-primary">Xoá</button>
+            <button type="button" class="btn btn-primary"><a href="/products/about">Huỷ</a></button>
+        </div>
+    }
+
+</div>

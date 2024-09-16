@@ -1,0 +1,47 @@
+﻿@model WebsiteBanRuouVang.Models.Users
+
+@{
+    ViewBag.Title = "Đăng kí";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="container-login">
+    @using (Html.BeginForm("Register", "Users", FormMethod.Post))
+    {
+    <div class="login-left signup-left">
+        <div class="login-left-cover signup-left-cover">
+            <input type="hidden" value="user" name="Role"/>
+            <h2 class="mb-4 login-left-heading signup-left-heading">Đăng kí</h2>
+            <div class="mb-3 login-left-input signup-left-input">
+                @Html.LabelFor(model => model.UserName, "USERNAME", htmlAttributes: new { @class = "form-label" })
+                @Html.TextBoxFor(model => model.UserName, new { required = "required", placeholder = "Tài khoản" })
+                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+            </div>
+            <div class="mb-3 login-left-input signup-left-input">
+                @Html.LabelFor(model => model.password, "PASSWORD", htmlAttributes: new { @class = "form-label" })
+                @Html.TextBoxFor(model => model.password, new { type = "password", required = "required", placeholder = "Mật khẩu"})
+                @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+            </div>
+            <div class="mb-3 login-left-input signup-left-input">
+                @Html.Label("RETYPE PASSWORD", new { @for = "retypePassword", @class = "form-label" })
+                @Html.TextBox("retypePassword", "", new {type = "password", required = "required", placeholder = "Xác nhận mật khẩu" })
+                @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+            </div>
+            <div class="mb-3 login-left-input mg-b-16px signup-left-input">
+                @Html.LabelFor(model => model.Email, "Email", htmlAttributes: new { @class = "form-label" })
+                @Html.TextBoxFor(model => model.Email, new { placeholder = "Email", type = "email" })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+            <div class="mb-3 login-left-input signup-left-input">
+                <button type="submit" class="btn btn-primary btn-block"><span>Đăng kí</span></button>
+                @*<button type="button" class="btn-primary btn-block"><a href="/users/login">Đăng nhập</a></button>*@
+            </div>
+        </div>
+    </div>
+    }
+    <div class="login-center"></div>
+    <div class="login-right">
+        <img src="~/image/image1-2.jpg" class="login-right-img" />
+    </div>
+</div>
+

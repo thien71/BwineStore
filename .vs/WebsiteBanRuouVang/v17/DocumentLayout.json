@@ -1,0 +1,229 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|d:\\university\\hkv\\ltwebnc\\cuoiki\\websitebanruouvang\\views\\carts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|solutionrelative:views\\carts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\views\\products\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|solutionrelative:views\\products\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|solutionrelative:css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\controllers\\cartscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|solutionrelative:controllers\\cartscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|solutionrelative:views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|solutionrelative:views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\views\\shared\\_layoutpage1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|solutionrelative:views\\shared\\_layoutpage1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\models\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|solutionrelative:models\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|solutionrelative:models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1267231F-F2D6-42A8-9287-14F50C79E206}|WebsiteBanRuouVang.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Views\\Products\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Products\\Delete.cshtml",
+              "ToolTip": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Views\\Products\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Products\\Delete.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABIAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-30T18:04:15.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "style.css",
+              "DocumentMoniker": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\css\\style.css",
+              "RelativeDocumentMoniker": "css\\style.css",
+              "ToolTip": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\css\\style.css",
+              "RelativeToolTip": "css\\style.css",
+              "ViewState": "AQIAAHIFAAAAAAAAAAAowIcFAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-05-29T11:57:40.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Views\\Carts\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Carts\\Index.cshtml",
+              "ToolTip": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Views\\Carts\\Index.cshtml",
+              "RelativeToolTip": "Views\\Carts\\Index.cshtml",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAI0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-29T11:48:01.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Views\\Products\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Products\\Details.cshtml",
+              "ToolTip": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Views\\Products\\Details.cshtml",
+              "RelativeToolTip": "Views\\Products\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-27T13:55:36.326Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAnwFcAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T05:25:43.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T18:30:06.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_LayoutPage1.cshtml",
+              "DocumentMoniker": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Views\\Shared\\_LayoutPage1.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LayoutPage1.cshtml",
+              "ToolTip": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Views\\Shared\\_LayoutPage1.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LayoutPage1.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAADYAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-30T16:13:07.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AQIAAM4AAAAAAAAAAAAswGcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T06:49:12.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CartsController.cs",
+              "DocumentMoniker": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Controllers\\CartsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CartsController.cs",
+              "ToolTip": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Controllers\\CartsController.cs",
+              "RelativeToolTip": "Controllers\\CartsController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T11:49:02.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-30T16:11:06.022Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Views\\Products\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Products\\Index.cshtml",
+              "ToolTip": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Views\\Products\\Index.cshtml",
+              "RelativeToolTip": "Views\\Products\\Index.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACMAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-02T06:49:04.508Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Models\\Cart.cs",
+              "RelativeDocumentMoniker": "Models\\Cart.cs",
+              "ToolTip": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Models\\Cart.cs",
+              "RelativeToolTip": "Models\\Cart.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T06:48:21.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Brand.cs",
+              "DocumentMoniker": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Models\\Brand.cs",
+              "RelativeDocumentMoniker": "Models\\Brand.cs",
+              "ToolTip": "D:\\University\\HKV\\LTWebNC\\CuoiKi\\WebsiteBanRuouVang\\Models\\Brand.cs",
+              "RelativeToolTip": "Models\\Brand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T06:46:30.709Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

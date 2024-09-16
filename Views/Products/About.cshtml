@@ -1,0 +1,93 @@
+﻿@model List<WebsiteBanRuouVang.Models.Products>
+
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    var cookie = Context.Request.Cookies["auth"];
+    ViewBag.Username = cookie.Value;
+}
+@{
+    var i = 1;
+}
+
+<div class="manage-product">
+    <div class="manage-product-header">
+        <h2 class="manage-product-header-h">Sản phẩm</h2>
+        @using (Html.BeginForm("About", "Products", FormMethod.Get, new { id = "myForm", @class = "manage-product-sort" }))
+        {
+            <p>
+                @Html.DropDownList("sortOrder", new List<SelectListItem> {
+                    new SelectListItem {Text="Sắp xếp theo Tên",Value="Name"},
+                    new SelectListItem {Text="Sắp xếp theo Giá",Value="Price"},
+                    new SelectListItem {Text="Sắp xếp theo Danh mục",Value="DepId"},
+                    new SelectListItem {Text="Sắp xếp theo Thương hiệu",Value="BrandId"},
+                    new SelectListItem {Text="Sắp xếp theo Mã sản phẩm",Value="Id"},
+                }, "Chọn cách sắp xếp!")
+            </p>
+        }
+    </div>
+
+    <div class="manage-product-content">
+        <table class="table table-Primary table-striped manage-product-content-table">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Hình ảnh</th>
+                    <th>Tên</th>
+                    <th>Giá</th>
+                    <th>Mô tả</th>
+                    <th>Danh mục</th>
+                    <th>Thương hiệu</th>
+                    <th></th>
+                    <th></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@i</td>
+                        <td><img src="~/image/@item.Image" /></td>
+                        <td>@Html.DisplayFor(row => item.Name)</td>
+                        @*<td>@Html.DisplayFor(row => item.Price)</td>*@
+                        <td>@item.Price.ToString("N0") VNĐ</td>
+                        <td>@Html.DisplayFor(row => item.Detail)</td>
+                        <td>@Html.DisplayFor(row => item.Departments.Name)</td>
+                        <td>@Html.DisplayFor(row => item.Brands.Name)</td>
+                        <td>
+                            <a href="/Products/edit/@item.Id">Sửa</a>
+                        </td>
+                        <td>
+                            <a href="/Products/delete/@item.Id">Xoá</a>
+                            @{
+                                i++;
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="manage-product-add">
+        <button> 
+            <a href="/products/create">
+                 <i class="fa-solid fa-circle-plus"></i>
+                 <span>Thêm</span>
+            </a>
+        </button>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('#sortOrder').change(function () {
+            $('#myForm').submit();
+        });
+    })
+</script>
+
+
+
+

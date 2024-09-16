@@ -1,0 +1,115 @@
+﻿@model List<WebsiteBanRuouVang.Models.Products>
+
+@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    var cookie = Context.Request.Cookies["auth"];
+
+    if (cookie != null)
+    {
+        ViewBag.Username = cookie.Value;
+    }
+}
+
+
+<div class="row p-6" style="margin-bottom: 0px">
+    <div class="col-md-12 text-center">
+        <img name="myimage" class="myimage img-fluid" src="/image/image1.jpg" alt="Banner" style="width: 100%; max-width: 1292px; height: 420px;">
+        @*<img src="~/image/footer-banner.png"
+            ="width: 100%;">*@
+    </div>
+</div>
+
+<div class="Sanphamhot">
+    <h2 class="sanphamhot-title">Danh sách sản phẩm nổi bật</h2>
+    <div class="image-slider">
+        @foreach (var product in Model.Where(x => x.Price > 2500000 & x.DepId <= 3).Take(5))
+            {
+                <a href="/Products/Details/@product.Id">
+                    <div class="image-item card-wrapper">
+                        <div class="image">
+                            <img src="~/image/@product.Image" alt="" />
+                        </div>
+                        <h3 class="image-title">@product.Name</h3>
+                        <p class="card-text">@product.Price.ToString("N0") VNĐ</p>
+                    </div>
+                </a>
+            }
+    </div>
+</div>
+
+<div class="container1">
+    @*<div> <img src="~/image/sale.png" /></div>*@
+    @*<div>*@
+    <div class="left-sidebar">
+        <div class="news">
+            <ul class="news-list">
+                <li class="news-item">
+                    <h3 class="news-item-title">BOWMORE 18 NĂM - HỘP QUÀ TẾT 2024</h3>
+                    <p class="news-item-describe">Rượu Bowmore 18 năm - Hộp quà Tết Giáp Thìn năm 2024 - dòng whisky single malt khói tròn trịa này với chất rượu full - body. Bowmore là một trong 8 nhà chưng cất quyền lực của Islay, Scotland.</p>
+                    <div class="news-img-cover">
+                        <img src="~/image/image1-1.jpg" alt="BOWMORE 18 NĂM - HỘP QUÀ TẾT 2024">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="news">
+            <ul class="news-list">
+                <li class="news-item">
+                    <h3 class="news-item-title">JOHNNIE WALKER KING GEORGE V - TẾT 2024</h3>
+                    <p class="news-item-describe">Rượu Johnnie Walker King George V - phiên bản thiết kế đặc biệt Tết 2024, được chiết xuất từ những thùng gỗ sồi cực kỳ quý hiếm, bao gồm cả những thùng không thể thay thế từ nhà chưng cất Port Ellen đã ngưng hoạt động trong thời gian dài.</p>
+                    <div class="news-img-cover">
+                        <img src="~/image/image1-2.jpg" alt="JOHNNIE WALKER KING GEORGE V - TẾT 2024">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="news">
+            <ul class="news-list">
+                <li class="news-item">
+                    <h3 class="news-item-title">GLENFIDDICH 15 NĂM - HỘP QUÀ TẾT 2024</h3>
+                    <p class="news-item-describe">Rượu Glenfiddich 15 năm - Set hộp quà Tết Giáp Thìn năm 2024 + 2ly tulip. đây là chai whisky có hương vị ấm nồng và phong phú. Glenfiddich là thương hiệu whisky single malt Scotch bán tốt nhất với vị trí dẫn đầu vè sản lượng.</p>
+                    <div class="news-img-cover">
+                        <img src="~/image/image1-3.jpg" alt="GLENFIDDICH 15 NĂM - HỘP QUÀ TẾT 2024">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="right-content">
+        <div class="list-container">
+            @foreach (var item in Model.Where(x => x.DepId <= 3))
+                {
+                    <a class="card-wrapper" href="/Products/Details/@item.Id">
+                        <div class="card1">
+                            <div class="bg">
+                                <img src="~/image/@item.Image" class="card-img-top1" alt="Product Image">
+                                <div class="card-body1">
+                                    <h5 class="card-title">@item.Name</h5>
+                                    <p class="card-text">@item.Price.ToString("N0") VNĐ</p>
+
+                                </div>
+                                <div class="add-cart">
+                                    @if (cookie != null)
+                                    {
+                                        <button class="btn btn-info">
+                                            <a href="/carts/add/@item.Id">Thêm vào giỏ hàng</a>
+                                        </button>
+                                    }
+                                    else
+                                    {
+                                        <button class="btn btn-info">
+                                            <a href="/Users/Login">Thêm vào giỏ hàng</a>
+                                        </button>
+                                    }
+                                </div>
+                            </div>
+                            <div class="blob"></div>
+                        </div>
+                    </a>
+                }
+        </div>
+    </div>
+    @*</div>*@
+</div>

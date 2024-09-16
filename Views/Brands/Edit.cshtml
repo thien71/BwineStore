@@ -1,0 +1,30 @@
+﻿@model  WebsiteBanRuouVang.Models.Brands
+@{
+    ViewBag.Title = "Sửa thương hiệu";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    var cookie = Context.Request.Cookies["auth"];
+    ViewBag.Username = cookie.Value;
+}
+
+<div class="create-product">
+    <div class="create-product-header">
+        <h2>@ViewBag.Title</h2>
+    </div>
+
+    <div class="create-product-content">
+        @using (Html.BeginForm("Edit", "Brands", FormMethod.Post))
+        {
+            <div class="create-product-content-top">
+                <div class="create-dep-content-item">
+                    @Html.LabelFor(model => model.Name, "Tên thương hiệu")
+                    @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                </div>
+            </div>
+
+            <div class="create-product-content-bottom edit-product-content-bottom">
+                <button type="submit" class="btn btn-primary">Sửa</button>
+                <button type="button" class="btn btn-primary"><a href="/Brands/Index">Huỷ</a></button>
+            </div>
+        }
+    </div>
+</div>

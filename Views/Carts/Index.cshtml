@@ -1,0 +1,142 @@
+﻿@model List<WebsiteBanRuouVang.Models.Carts>
+
+@{
+    ViewBag.Title = "Giỏ hàng";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    var cookie = Context.Request.Cookies["auth"];
+    ViewBag.Username = cookie.Value;
+}
+
+<div class="cart">
+    <div class="cart-header">
+        <h2 class="cart-header-title">Giỏ hàng</h2>
+        <ul class="cart-header-list">
+            <li class="cart-header-item">
+                <input type="checkbox" class="cart-header-item-checkbox">
+            </li>
+            <li class="cart-header-item">Hình ảnh</li>
+            <li class="cart-header-item">Tên sản phẩm</li>
+            <li class="cart-header-item">Danh mục</li>
+            <li class="cart-header-item">Số lượng</li>
+            <li class="cart-header-item">Số tiền</li>
+            <li class="cart-header-item">Thao tác</li>
+        </ul>
+    </div>
+
+    @{
+        int i = 1;
+        int totPrice = 0;
+        int totQuanlity = 0;
+    }
+
+    <div class="cart-content">
+        @foreach (var item in Model)
+        {
+            <ul class="cart-content-list">
+                <li class="cart-content-item">
+                    <input type="checkbox" class="cart-content-item-checkbox">
+                </li>
+                <li class="cart-content-item">
+                    <img src="~/image/@item.Products.Image" class="cart-content-item-img"/>
+                </li>
+                <li class="cart-content-item">
+                    <span>@item.Products.Name</span>
+                </li>
+                <li class="cart-content-item">
+                    <span>@item.Products.Brands.Name</span>    
+                </li>
+                <li class="cart-content-item">
+                    @using (Html.BeginForm("UpdateQuantity", "Carts", FormMethod.Get))
+                    {
+                        <input type="number" name="quan" value="@item.Quantity" min="1" style="width: 60px;" />
+                        <input type="hidden" name="proid" value="@item.Id" />
+                        <input type="submit" value="Update" class="btn btn-warning" />
+
+                        totQuanlity += item.Quantity;
+                       
+                    }
+                </li>
+                <li class="cart-content-item">
+                    @{
+                        int Price = item.Quantity * item.Products.Price;
+                        totPrice += Price;
+                        i++;
+                    }
+                    @Price.ToString("N0") VNĐ
+                </li>
+                <li class="cart-content-item">
+                    @using (Html.BeginForm("Delete", "Carts", FormMethod.Post))
+                    {
+                        @Html.Hidden("id", item.CartId)
+                        <button type="submit" class="btn btn-warning">Xoá</button>
+                    }
+                </li>
+            </ul>
+        }
+    </div>
+
+    <div class="cart-bottom">
+        <ul class="cart-bottom-list-left">
+            <li class="cart-bottom-item">
+                <input type="checkbox" class="cart-bottom-item-checkbox">
+            </li>
+            <li class="cart-bottom-item">Chọn tất cả (@totQuanlity)</li>
+            <li class="cart-bottom-item disable-cursor">
+                @using (Html.BeginForm("DeleteAll", "Carts", FormMethod.Post))
+                {
+                    <button type="submit">Xoá tất cả</button>
+                }
+            </li>
+        </ul>
+        <ul class="cart-bottom-list-right">
+            <li class="cart-bottom-item">Tổng tiền</li>
+            <li class="cart-bottom-item">@totPrice.ToString("N0") VNĐ</li>
+            <li class="cart-bottom-item">
+                <button type="button" class="cart-bottom-button disable-cursor">Mua hàng</button>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.cart-bottom-item-checkbox').change(function () {
+            if ($(this).is(':checked')) {
+                $('.cart-header-item-checkbox').prop('checked', true);
+                $('.cart-content-item-checkbox').prop('checked', true);
+                $('.cart-bottom-list-left .cart-bottom-item:nth-child(3) button').css('cursor', 'pointer');
+                $('.cart-bottom-button').css('cursor', 'pointer');
+            } else {
+                $('.cart-header-item-checkbox').prop('checked', false);
+                $('.cart-content-item-checkbox').prop('checked', false);
+                $('.cart-bottom-list-left .cart-bottom-item:nth-child(3) button').css('cursor', 'not-allowed');
+                $('.cart-bottom-button').css('cursor', 'not-allowed');
+            }
+        });
+
+        $('.cart-header-item-checkbox').change(function () {
+            if ($(this).is(':checked')) {
+                $('.cart-bottom-item-checkbox').prop('checked', true);
+                $('.cart-content-item-checkbox').prop('checked', true);
+                $('.cart-bottom-list-left .cart-bottom-item:nth-child(3) button').css('cursor', 'pointer');
+                $('.cart-bottom-button').css('cursor', 'pointer');
+            } else {
+                $('.cart-bottom-item-checkbox').prop('checked', false);
+                $('.cart-content-item-checkbox').prop('checked', false);
+                $('.cart-bottom-list-left .cart-bottom-item:nth-child(3) button').css('cursor', 'not-allowed');
+                $('.cart-bottom-button').css('cursor', 'not-allowed');
+            }
+        });
+
+        $('.cart-content-item-checkbox').change(function () {
+            if ($(this).is(':checked')) {
+                $('.cart-bottom-list-left .cart-bottom-item:nth-child(3) a').css({ 'cursor': 'pointer' });
+                $('.cart-bottom-button').css('cursor', 'pointer');
+            } else {
+                $('.cart-bottom-list-left .cart-bottom-item:nth-child(3) a').css({ 'cursor': 'pointer' });
+                $('.cart-bottom-button').css('cursor', 'not-allowed');
+            }
+        });
+    });
+
+</script>

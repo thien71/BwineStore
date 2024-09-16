@@ -1,0 +1,36 @@
+﻿@model WebsiteBanRuouVang.Models.Brands
+@{
+    ViewBag.Title = "Xoá thương hiệu";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    var cookie = Context.Request.Cookies["auth"];
+    ViewBag.Username = cookie.Value;
+}
+
+<div class="manage-product">
+    <div class="manage-product-header">
+        <h2 class="manage-product-header-h">@ViewBag.Title</h2>
+    </div>
+
+    @using (Html.BeginForm("Delete", "Brands", FormMethod.Post, new { id = "myForm", @class = "manage-product-content" }))
+    {
+        <table class="table table-Primary table-striped manage-product-content-table delete-dep-content-table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Tên</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Html.DisplayFor(row => Model.BrandId)</td>
+                    <td>@Html.DisplayFor(row => Model.Name)</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="create-product-content-bottom edit-product-content-bottom">
+            <button type="submit" class="btn btn-primary">Xoá</button>
+            <button type="button" class="btn btn-primary"><a href="/Brands/Index">Huỷ</a></button>
+        </div>
+    }
+
+</div>

@@ -1,0 +1,35 @@
+﻿@model WebsiteBanRuouVang.Models.Users
+
+@{
+    ViewBag.Title = "Đăng nhập";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="container-login">
+    @using (Html.BeginForm("Login", "Users", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="login-left">
+            <div class="login-left-cover">
+                <h2 class="mb-4 login-left-heading">Đăng nhập</h2>
+                <div class="mb-3 login-left-input">
+                    @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "form-label" })
+                    @Html.TextBoxFor(model => model.UserName, new { placeholder = "USERNAME", required = "required" })
+                    @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                </div>
+                <div class="mb-3 login-left-input mg-b-32px">
+                    @Html.LabelFor(model => model.password, htmlAttributes: new { @class = "form-label" })
+                    @Html.TextBoxFor(model => model.password, new { placeholder = "PASSWORD", required = "required", type = "password" })
+                    @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger", })
+                </div>
+                <div class="mb-3 login-left-input">
+                    <button type="submit" class="btn btn-primary btn-block"><span>Đăng nhập</span></button>
+                    <button type="button" class="btn-primary btn-block"><a href="/users/register">Đăng kí</a></button>
+                </div>
+            </div>
+        </div>
+    }
+    <div class="login-center"></div>
+    <div class="login-right">
+        <img src="~/image/image1-3.jpg" class="login-right-img"/>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    var cookie = Context.Request.Cookies["auth"];
+    ViewBag.Username = cookie.Value;
+}
+
+
+<div class="body-product">
+    <figure class="product">
+        <div class="product-hero">
+            <img src="/image/@ViewBag.Product.Image" alt="white amber mist" class="product-image">
+        </div>
+        <div class="product-content">
+            <div class="product-title">
+                <h1 class="product-heading">@ViewBag.Product.Name</h1>
+                <div class="product-tag">
+                    @*<p class="product-tag-2">#xethethao</p>
+                <p class="product-tag-2">#hot</p>*@
+                </div>
+            </div>
+            <p class="product-brand">
+                <span>Thương hiệu: </span>
+                <span>@ViewBag.brand.Name</span>
+            </p>
+            <p class="product-department">
+                <span>Danh mục: </span>
+                <span>@ViewBag.dep.Name</span>
+            </p>
+            <p class="product-description">@ViewBag.Product.Detail</p>
+            <p class="product-cost">
+                <span>Giá: </span>
+                <span>@ViewBag.Product.Price.ToString("N0") VND</span>
+            </p>
+            <div class="product-details">
+                <div class="add-cart">
+                    <button class="btn btn-info"><a href="/carts/add/@ViewBag.Product.Id">Thêm vào giỏ hàng</a></button>
+                </div>
+            </div>
+        </div>
+    </figure>
+</div>

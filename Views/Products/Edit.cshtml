@@ -1,0 +1,70 @@
+﻿@model WebsiteBanRuouVang.Models.Products
+
+@{
+    ViewBag.Title = "Sửa sản phẩm";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    var cookie = Context.Request.Cookies["auth"];
+    ViewBag.Username = cookie.Value;
+}
+
+
+<div class="create-product">
+    <div class="create-product-header">
+        <h2>@ViewBag.Title</h2>
+    </div>
+
+    <div class="create-product-content">
+        @using (Html.BeginForm("Edit", "Products", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div class="create-product-content-top">
+                <div class="create-product-content-left">
+                    <div class="create-product-content-item">
+                        @Html.LabelFor(model => model.Name, "Tên sản phẩm")
+                        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Name)
+                    </div>
+                    <div class="create-product-content-item">
+                        @Html.LabelFor(model => model.Price, "Giá sản phẩm")
+                        @Html.TextBoxFor(model => model.Price, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Price)
+                    </div>
+
+                    <div class="create-product-content-item">
+                        @Html.LabelFor(model => model.DepId, "Danh mục")
+                        @Html.DropDownListFor(model => model.DepId, new SelectList(ViewBag.Departments, "DepId", "Name"), "Chọn danh mục", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.DepId)
+                    </div>
+                    <div class="create-product-content-item">
+                        @Html.LabelFor(model => model.BrandId, "Thương hiệu")
+                        @Html.DropDownListFor(model => model.BrandId, new SelectList(ViewBag.Brands, "BrandId", "Name"), "Chọn Thương hiệu", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.BrandId)
+                    </div>
+                </div>
+
+                <div class="create-product-content-right">
+                    <div class="create-product-content-item">
+                        @Html.LabelFor(model => model.Detail, "Mô tả")
+                        @Html.TextAreaFor(model => model.Detail, new { @class = "form-control", @rows = 7 })
+                        @Html.ValidationMessageFor(model => model.Detail)
+                    </div>
+
+                    <div class="create-product-content-item">
+                        @Html.Label("Ảnh", new { @class = "form-label" })
+                        @Html.TextBoxFor(model => model.Image, new { @class = "form-control display-none" })
+                        <input type="file" id="Image" name="Image" class="form-control">
+                        @Html.ValidationMessageFor(model => model.Image)
+                    </div>
+                </div>
+            </div>
+
+            <div class="create-product-content-bottom edit-product-content-bottom">
+                <button type="submit" class="btn btn-primary">Sửa</button>
+                <button type="button" class="btn btn-primary"><a href="/products/about">Huỷ</a></button>
+            </div>
+        }
+    </div>
+</div>
+
+@*@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}*@

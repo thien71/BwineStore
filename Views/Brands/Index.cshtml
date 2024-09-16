@@ -1,0 +1,67 @@
+﻿@model List<WebsiteBanRuouVang.Models.Brands>
+
+@{
+    ViewBag.Title = "Thương hiệu";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+    var cookie = Context.Request.Cookies["auth"];
+    ViewBag.Username = cookie.Value;
+}
+
+
+<div class="manage-product">
+    <div class="manage-product-header">
+        <h2 class="manage-product-header-h">@ViewBag.Title</h2>
+        @using (Html.BeginForm("Index", "Brands", FormMethod.Get, new { id = "myForm", @class = "manage-product-sort" }))
+        {
+            <p>
+                @Html.DropDownList("sortOrder", new List<SelectListItem> {
+                    new SelectListItem {Text="Sắp xếp theo Tên",Value="Name"},
+                    new SelectListItem {Text="Sắp xếp theo Id",Value="BrandId"}
+
+                }, "Chọn cách sắp xếp!")
+            </p>
+        }
+    </div>
+
+    <div class="manage-product-content">
+        <table class="table table-Primary table-striped manage-product-content-table manage-dep-content-table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Tên</th>
+                    <th>Sửa</th>
+                    <th>Xoá</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>@Html.DisplayFor(row => item.BrandId)</td>
+                    <td>@Html.DisplayFor(row => item.Name)</td>
+                    <td><a href="/Brands/edit/@item.BrandId">Sửa</a></td>
+                    <td><a href="/Brands/delete/@item.BrandId">Xoá</a></td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="manage-product-add">
+        <button>
+            <a href="/Brands/Create">
+                <i class="fa-solid fa-circle-plus"></i>
+                <span>Thêm</span>
+            </a>
+        </button>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('#sortOrder').change(function () {
+            $('#myForm').submit();
+        });
+    })
+</script>
